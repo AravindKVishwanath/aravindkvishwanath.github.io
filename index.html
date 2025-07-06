@@ -1,94 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aravind K Vishwanath - Resume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .section {
-      margin-bottom: 24px;
-    }
-    .contact {
-      font-size: 0.95em;
-      color: #555;
-    }
-    @media screen and (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind K Vishwanath - Resume</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        br{
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        body.dark-mode {
+            background-color: #1a2a3a;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .dark-mode .contact-info a {
+            color: #5dade2;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .dark-mode h1 {
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .dark-mode h2 {
+            border-bottom-color: #2c3e50;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 15px 0 5px;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .job-title,
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .company,
+        .tech-stack,
+        .date {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .dark-mode .company,
+        .dark-mode .tech-stack,
+        .dark-mode .date {
+            color: #bbb;
+        }
+
+        .tech-stack {
+            margin-top: 5px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .toggle-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .toggle-btn:hover {
+            background: #2980b9;
+        }
+
+        .header {
+            position: relative;
+            padding-right: 120px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .contact-info {
+                font-size: 0.9rem;
+            }
+
+            .toggle-container {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 15px;
+                text-align: right;
+            }
+
+            .header {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            ul {
+                margin-left: 15px;
+            }
+
+            .toggle-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>ARAVIND K VISHWANATH</h1>
-    <p class="contact">📧 aravindkvishwanath59@gmail.com | 📞 +91 9611767475</p>
-    <p class="contact">GitHub: <a href="https://github.com/AravindKVishwanath">AravindKVishwanath</a> | LinkedIn: <a href="http://www.linkedin.com/in/aravindkvishwanath">aravindkvishwanath</a></p>
-
-    <div class="section">
-      <h2>EXPERIENCE</h2>
-      <ul>
-        <li><strong>Project Intern | Infocon International Pvt Ltd</strong> – Sep 2024 – Oct 2024<br>
-          • Built backend for an AI search engine using Elasticsearch, NLP, NER, Python, SpaCy, text-recognition.
-        </li>
-        <li><strong>AI Engineer Intern | Kazunov 1AI</strong> – Mar 2025 – Present<br>
-          • Working on Intelligent Document Processing (IDP) to automate data extraction/classification from documents using OCR, NLP, LLMs, LayoutLM.
-        </li>
-      </ul>
+    <div class="header">
+        <h1>ARAVIND K VISHWANATH</h1>
+        <div class="contact-info">
+            aravindkvishwanath59@gmail.com | (+91) 9611767475<br>
+            Portfolio: <a href="https://aravindkv.in">aravindkv.in</a> |
+            GitHub: <a href="https://github.com/AravindKVishwanath">AravindKVishwanath</a> |
+            LinkedIn: <a href="http://www.linkedin.com/in/aravindkvishwanath">aravindkvishwanath</a>
+        </div>
+        <div class="toggle-container">
+            <button class="toggle-btn" id="themeToggle">
+                <span>🌙</span> Dark Mode
+            </button>
+        </div>
     </div>
 
     <div class="section">
-      <h2>PROJECTS</h2>
-      <ul>
-        <li><strong>HydroWatt</strong> – Cross-platform mobile app for water and electricity tracking. Backend in Node.js & MongoDB. UI in React Native. Integrated with Arduino, Firebase.</li>
-        <li><strong>Tatva Fest Website</strong> – Handled backend (payments, tickets) & frontend improvements. Node.js, MongoDB, Cashfree.</li>
-        <li><strong>Sparq</strong> – CLI tool (npm) to initialize project boilerplates. Built with Node.js, chalk-animation, inquirer.</li>
-      </ul>
+        <h2>EXPERIENCE</h2>
+        <div class="experience-item">
+            <div class="job-title">AI Engineer Intern | Kazunov 1AI</div>
+            <div class="date">Mar 2025 - Present</div>
+            <ul>
+                <li>Building models and scalable pipelines in AWS to reduce manual effort, streamline workflows in insurance processes.</li>
+                <li>Optimized pipeline inference time, implemented authentication, and architected the workflow to support multi-user access.</li>
+            </ul>
+            <div class="tech-stack">AWS, Docker, OCR, NLP, LLMs, LayoutLM, Machine Learning.</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Project Intern | Infocon International Pvt Ltd</div>
+            <div class="date">Sep 2024 - Oct 2024</div>
+            <ul>
+                <li>Contributed to building an AI based search engine, which optimized the search in terms of speed and context.</li>
+                <li>Designed and handled the backend system of the search engine, including ranking the data and indexing for better search.</li>
+            </ul>
+            <div class="tech-stack">Elasticsearch, NLP, NER, Python, Flask, Spacy.</div>
+        </div>
     </div>
 
     <div class="section">
-      <h2>EDUCATION</h2>
-      <p><strong>BE in Computer Science and Engineering</strong> – BNMIT, Bangalore (Oct 2022 – May 2026)</p>
+        <h2>PROJECTS</h2>
+        <div class="project-item">
+            <div class="project-title">Personal Portfolio Website – aravindkv.in</div>
+            <ul>
+                <li>Designed and developed a personal portfolio website to showcase my projects, skills, and resume.</li>
+                <li>Integrated Firebase for real-time data handling and Nodemailer for contact form email automation.</li>
+            </ul>
+            <div class="tech-stack">Next.js, Firebase, Nodemailer, Vercel</div>
+
+            <div class="project-title">College Conference Website – ICASAM 2025</div>
+            <ul>
+                <li>Designed and implemented a responsive, accessible interface to ensure smooth browsing across devices and screen sizes</li>
+                <li>Contributed to front-end enhancements for improved user experience.</li>
+            </ul>
+
+            <div class="project-title">College Fest Website – Tatva '24</div>
+            <ul>
+                <li>Built back-end features for college fest website, enabling secure online payments.</li>
+                <li>Managed online ticketing system for efficient event attendance.</li>
+                <li>Contributed to front-end enhancements for improved user experience.</li>
+            </ul>
+            <div class="tech-stack">HTML, CSS, JS, NodeJs, ExpressJs, MongoDB, Cashfree Payments Gateway.</div>
+
+            <div class="project-title">Sparq – A CLI tool for project initialization</div>
+            <ul>
+                <li>Developed Sparq, a CLI tool published on NPM that streamlines project initialization by generating boilerplate code for web, mobile, and desktop applications with minimal setup and commands.</li>
+                <li>Built the CLI tool to ease the process of searching for boiler plate codes</li>
+            </ul>
+            <div class="tech-stack">Node.js, chalk-animation, inquirer (package), NPM.</div>
+
+            <div class="project-title">HydroWatt – A Water and Electricity Tracking App</div>
+            <ul>
+                <li>A cross-platform mobile app to track the usage of water and electricity at home.</li>
+                <li>Optimized backend with Node.js and MongoDB, improving load times by 40% and ensuring smooth frontend integration. Designed the User-Interface of the App.</li>
+            </ul>
+            <div class="tech-stack">React Native, Node.js, Express.js, MongoDB, Arduino, Firebase.</div>
+        </div>
     </div>
 
     <div class="section">
-      <h2>SKILLS</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java, Python, JavaScript, C, C++</li>
-        <li><strong>Frameworks/Libraries:</strong> React Native, Node.js, Express.js, MERN Stack</li>
-        <li><strong>Tools/Software:</strong> Blender, Figma, Firebase, MongoDB, Elasticsearch</li>
-        <li><strong>Technologies:</strong> NLP, NER, Data Visualization</li>
-      </ul>
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <div class="degree">BE in Computer Science and Engineering | BNMIT, Bangalore | (Oct '22 – May '26) CGPA – 9.61</div>
+        </div>
     </div>
 
     <div class="section">
-      <h2>CERTIFICATIONS</h2>
-      <ul>
-        <li>The Complete Web Development Bootcamp, Udemy</li>
-        <li>Coding and Programming using Python, Samsung Innovation Campus</li>
-        <li>IT Fundamentals, RDBMS – PwC Launchpad 2025</li>
-      </ul>
+        <h2>SKILLS</h2>
+        <div class="skills-item">
+            <div class="skill-category"><strong>Programming Languages:</strong> Python, Go, Java, JavaScript, C</div>
+            <div class="skill-category"><strong>Frameworks & Libraries:</strong> Next.js, React.js, React Native, Node.js, Express.js, MERN Stack.</div>
+            <div class="skill-category"><strong>Tools & Platforms:</strong> AWS, Docker, Git, Figma, Firebase, MongoDB, Elasticsearch.</div>
+            <div class="skill-category"><strong>Technologies:</strong> NLP, OCR, Data Visualization, Basics of System Design.</div>
+        </div>
     </div>
-  </div>
+
+    <div class="section">
+        <h2>CERTIFICATIONS</h2>
+        <ul>
+            <li>Go (Basic), HackerRank</li>
+            <li>IT Fundamentals, RDBMS, Java and Cloud PwC Launchpad program 2025</li>
+            <li>The Complete Web Development Bootcamp, Udemy</li>
+            <li>Coding and Programming using Python, Samsung Innovation Campus, BNMIT</li>
+        </ul>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            updateButtonText(currentTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', '');
+                updateButtonText('');
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+                updateButtonText('dark-mode');
+            }
+        });
+
+        function updateButtonText(theme) {
+            themeToggle.innerHTML = theme === 'dark-mode'
+                ? '<span>☀️</span> Light Mode'
+                : '<span>🌙</span> Dark Mode';
+        }
+    </script>
 </body>
+
 </html>
